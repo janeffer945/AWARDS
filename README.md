@@ -54,7 +54,7 @@ To get the code..
 
 1. Cloning the repository:
   ```bash
-  git clone `https://github.com/janeffer945/AWARDS.git
+  git clone `https://github.com/janeffer945/AWARDS.git'
 2. Move to the folder and install requirements
   ```bash
   cd myapp
