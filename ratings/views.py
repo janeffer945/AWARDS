@@ -41,3 +41,20 @@ def upload_project(request):
     else:
         form=DisplayProjectForm()
     return render(request,"all-awards/upload_project.html",{'form':form})
+
+
+    #Create user Proffile
+def create_profile(request):
+    current_user = request.user
+    title = "Create Profile"
+    if request.method == 'POST':
+        form = CreateProfileForm(request.POST, request.FILES)
+        if form.is_valid():
+            profile = form.save(commit=False)
+            profile.user = current_user
+            profile.save()
+        return HttpResponseRedirect('/')
+
+    else:
+        form = CreateProfileForm()
+    return render(request, 'all-awards/create_profile.html', {"form": form, "title": title})
