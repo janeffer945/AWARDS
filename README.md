@@ -13,6 +13,7 @@ As a user of the application you will be able to:
 3. Submit projects
 4. Create profile and edit profile
 5. Search for a project by title
+## BDD 
 
 
 
