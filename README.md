@@ -71,6 +71,10 @@ To get the code..
   ```
 Open the application on your browser `127.0.0.1:8000`
 
+### Known bugs
+No known bugs
+
+
 
 
 
