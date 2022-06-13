@@ -72,7 +72,8 @@ To get the code..
 Open the application on your browser `127.0.0.1:8000`
 
 ### Known bugs
-No known ## Contact Information
+No known bugs
+## Contact Information
 
 For any further inquiries or contributions or comments, reach me at 
 
