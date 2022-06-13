@@ -24,6 +24,10 @@ As a user of the application you will be able to:
 
 ## Getting started
 ### Prerequisites
+* python3.8
+* virtual environment
+* pipenv
+* django 3.2.13
 
 
 
