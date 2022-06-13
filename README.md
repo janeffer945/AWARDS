@@ -31,6 +31,17 @@ As a user of the application you will be able to:
 
 ### Technologies
 * BackEnd:
+* * Python
+      * Django
+* FontEnd:
+      * HTML
+      * CSS
+      * JavaScript
+      * Bootstrap
+* Database
+      * PostgreSQL
+* Deployment
+      * Heroku   
 
 
 
