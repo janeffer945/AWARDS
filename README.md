@@ -46,5 +46,9 @@ As a user of the application you will be able to:
 ## Installation
 ### Requirements
 
+* Either a computer,phone,tablet or an Ipad
+* An access to the Internet
+
+
 
 
