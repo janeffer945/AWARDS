@@ -3,4 +3,4 @@ Awwards is a platform where users can display their projects for others to see, 
 ## Description
 Awwards is an application which allows developers to post their projects and see how other developers rate them.
 ## Author
-[janeffer njeri]()
+[janeffer njeri](https://github.com/janeffer945)
