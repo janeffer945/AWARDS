@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ratings',
     'rest_framework',
+    'cloudinary'
     
 ]
 
@@ -80,7 +81,10 @@ WSGI_APPLICATION = 'heyAwards.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME':'awwards',
+        'PASSWORD':'njeri@K123',
+        'USER':'root',
+        'HOST':'localhost'
     }
 }
 
