@@ -42,3 +42,18 @@ class Project(models.Model):
     technologies = models.CharField(max_length=100)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="posts",null=True)
     
+    def save_project(self):
+        self.save()
+     
+    def delete_project(self):
+        self.delete()
+
+  # search project using project name
+    @classmethod
+    def search_project_name(cls, search_term):
+        images = cls.objects.filter(name__icontains=search_term)
+        return images    
+
+    def str(self):
+        return self.user.username
+ 
