@@ -6,5 +6,13 @@ Awwards is an application which allows developers to post their projects and see
 [janeffer njeri](https://github.com/janeffer945)
 
 ## Features
+As a user of the application you will be able to:
+
+1. See all posted projects
+2. See each project's description, image, date submitted and title.
+3. Submit projects
+4. Create profile and edit profile
+5. Search for a project by title
+
 
 
