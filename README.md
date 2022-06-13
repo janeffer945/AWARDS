@@ -49,6 +49,8 @@ As a user of the application you will be able to:
 * Either a computer,phone,tablet or an Ipad
 * An access to the Internet
 
+### Installation
+
 
 
 
