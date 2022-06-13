@@ -23,6 +23,7 @@ As a user of the application you will be able to:
 |View profile|click `username` link in the navbar|Redirects to profile page with an option to edit profile|
 
 ## Getting started
+### Prerequisites
 
 
 
