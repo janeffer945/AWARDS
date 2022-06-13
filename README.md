@@ -80,6 +80,12 @@ No known bugs
 For any further inquiries or contributions or comments, reach me at 
 janeffer njeri(janeffernjeri945@gmail.com)
 
+### License
+
+[MIT](license)
+
+Copyright (c) 2021
+
 
 
 
