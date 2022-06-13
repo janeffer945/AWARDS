@@ -50,6 +50,26 @@ As a user of the application you will be able to:
 * An access to the Internet
 
 ### Installation
+To get the code..
+
+1. Cloning the repository:
+  ```bash
+  git clone `
+2. Move to the folder and install requirements
+  ```bash
+  cd myapp
+  pipenv install <package name>
+  ```
+3. Running the application
+
+  ```bash
+  make
+  ```
+4. Testing the application
+  ```bash
+  python3.8 manage.py test
+  ```
+Open the application on your browser `127.0.0.1:8000`
 
 
 
