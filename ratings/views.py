@@ -58,3 +58,26 @@ def create_profile(request):
     else:
         form = CreateProfileForm()
     return render(request, 'all-awards/create_profile.html', {"form": form, "title": title})
+
+
+    #Update USer Profile
+def update_profile(request,id):
+    user = User.objects.get(id=id)
+    profile = Profile.objects.get(user = user)
+    form = UpdateProfileForm(instance=profile)
+    if request.method == "POST":
+            form = UpdateProfileForm(request.POST,request.FILES,instance=profile)
+            if form.is_valid():  
+                
+                profile = form.save(commit=False)
+                profile.save()
+                return redirect('profile') 
+            
+    ctx = {"form":form}
+    return render(request, 'all-awards/update_profile.html', ctx)
+
+def project_details(request, project_id):
+    project = Project.objects.get(id=project_id)
+    rating = Rating.objects.filter(project = project)
+    # get project rating
+    return render(request, "all-awards/project_details.html", {"project": project, "rating": rating})
