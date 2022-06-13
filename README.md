@@ -22,7 +22,7 @@ As a user of the application you will be able to:
 |Submit a post|click on `Submit`| An upload page appears with an upload form containing different fields|
 |View profile|click `username` link in the navbar|Redirects to profile page with an option to edit profile|
 
-
+## Getting started
 
 
 
