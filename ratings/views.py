@@ -6,8 +6,8 @@ from django.contrib.auth.decorators import login_required
 from .forms import CreateProfileForm, DisplayProjectForm, UpdateProfileForm
 
 from django.shortcuts import render,redirect,get_object_or_404
-from rest_framework import serializers
-from rest_framework.response import Response
+# from rest_framework import serializers
+# from rest_framework.response import Response
 from .models import Profile,Project,Rating
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
