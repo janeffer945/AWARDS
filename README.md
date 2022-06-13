@@ -29,5 +29,8 @@ As a user of the application you will be able to:
 * pipenv
 * django 3.2.13
 
+### Technologies
+* BackEnd:
+
 
 
