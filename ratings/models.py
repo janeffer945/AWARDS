@@ -1,9 +1,6 @@
-from django.db import models
 from cloudinary.models import CloudinaryField
 from django.contrib.auth.models import User
-
 from django.db import models
-
 
 
 # Create your models here.
@@ -31,6 +28,7 @@ class Profile(models.Model):
 
     def str(self):
         return self.user.username
+
 class Project(models.Model):
     image = CloudinaryField('image')
     link = models.URLField(max_length=255, null=True)
@@ -54,9 +52,10 @@ class Project(models.Model):
         images = cls.objects.filter(name__icontains=search_term)
         return images    
 
-    def str1(self):
+    def str(self):
         return self.user.username
- # rating models
+
+# rating models
 class Rating(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
@@ -65,7 +64,7 @@ class Rating(models.Model):
     content_rate = models.IntegerField(default=0, blank=True, null=True)
     avg_rate = models.IntegerField(default=0, blank=True, null=True)
     date = models.DateTimeField(auto_now_add=True, null=True)
-   
+
     def save_rating(self):
         self.save()
 
@@ -79,3 +78,4 @@ class Rating(models.Model):
 
     def __str__(self):
         return self.user.username
+    

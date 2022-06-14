@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'ratings',
     'rest_framework',
     'cloudinary',
-    'crispy_forms',
+    'crispy_forms'
        ]
 
 

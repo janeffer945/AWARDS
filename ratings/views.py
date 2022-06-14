@@ -1,3 +1,5 @@
+
+
 from django.http.response import HttpResponseRedirect
 from django.shortcuts import render
 from .models import *
@@ -17,7 +19,9 @@ from rest_framework.views import APIView
 from .permissions import  IsAdminOrReadOnly
 from ratings import serializer
 
+
 # Create your views here.
+
 def index(request):
    
     workks = Project.objects.all().order_by('-id')
@@ -41,9 +45,22 @@ def upload_project(request):
     else:
         form=DisplayProjectForm()
     return render(request,"all-awards/upload_project.html",{'form':form})
+#Create user Proffile
+def create_profile(request):
+    current_user = request.user
+    title = "Create Profile"
+    if request.method == 'POST':
+        form = CreateProfileForm(request.POST, request.FILES)
+        if form.is_valid():
+            profile = form.save(commit=False)
+            profile.user = current_user
+            profile.save()
+        return HttpResponseRedirect('/')
 
-
-    #Update USer Profile
+    else:
+        form = CreateProfileForm()
+    return render(request, 'all-awards/create_profile.html', {"form": form, "title": title})
+#Update USer Profile
 def update_profile(request,id):
     user = User.objects.get(id=id)
     profile = Profile.objects.get(user = user)
@@ -101,14 +118,14 @@ def search_project(request):
         return render(request, 'all-awards/search.html', {'danger': message})
     
 class ProjectList(APIView):
-    permission_classes = ('IsAdminOrReadOnly',)
+    permission_classes = (IsAdminOrReadOnly,)
     def get(self,request,format=None):
         projects = Project.objects.all()
         serializer = ProjectSerializer(projects,many=True)
         return Response(serializer.data)
 
 class ProfileList(APIView):
-    permission_classes = ('IsAdminOrReadOnly',)
+    permission_classes = (IsAdminOrReadOnly,)
     def get(self,request,format=None):
         profiles = Profile.objects.all()
         serializer = ProfileSerializer(profiles,many=True)
