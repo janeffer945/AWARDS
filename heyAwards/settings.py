@@ -45,8 +45,8 @@ INSTALLED_APPS = [
     'ratings',
     'rest_framework',
     'cloudinary',
-    'boostrap4'
-]
+    'crispy_forms',
+       ]
 
 
 MIDDLEWARE = [

@@ -6,15 +6,15 @@ from django.contrib.auth.decorators import login_required
 from .forms import CreateProfileForm, DisplayProjectForm, UpdateProfileForm
 
 from django.shortcuts import render,redirect,get_object_or_404
-# from rest_framework import serializers
-# from rest_framework.response import Response
+from rest_framework import serializers
+from rest_framework.response import Response
 from .models import Profile,Project,Rating
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect, Http404
-# from .serializer import ProfileSerializer,ProjectSerializer
-# from rest_framework.views import APIView
-# from .permissions import  IsAdminOrReadOnly
+from .serializer import ProfileSerializer,ProjectSerializer
+from rest_framework.views import APIView
+from .permissions import  IsAdminOrReadOnly
 from ratings import serializer
 
 # Create your views here.
@@ -100,14 +100,14 @@ def search_project(request):
         message = 'Not found'
         return render(request, 'all-awards/search.html', {'danger': message})
     
-# class ProjectList(APIView):
+class ProjectList(APIView):
     permission_classes = ('IsAdminOrReadOnly',)
     def get(self,request,format=None):
         projects = Project.objects.all()
         serializer = ProjectSerializer(projects,many=True)
         return Response(serializer.data)
 
-# class ProfileList(APIView):
+class ProfileList(APIView):
     permission_classes = ('IsAdminOrReadOnly',)
     def get(self,request,format=None):
         profiles = Profile.objects.all()

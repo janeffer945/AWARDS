@@ -54,7 +54,7 @@ class Project(models.Model):
         images = cls.objects.filter(name__icontains=search_term)
         return images    
 
-    def str(self):
+    def str1(self):
         return self.user.username
  # rating models
 class Rating(models.Model):
